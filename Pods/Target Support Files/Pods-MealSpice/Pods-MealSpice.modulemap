@@ -1,0 +1,6 @@
+framework module Pods_MealSpice {
+  umbrella header "Pods-MealSpice-umbrella.h"
+
+  export *
+  module * { export * }
+}
