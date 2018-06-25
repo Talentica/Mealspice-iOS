@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E163C7720E0D0D600D76D6B /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E163C7620E0D0D600D76D6B /* RestaurantViewModel.swift */; };
+		3E163C7A20E0E4B500D76D6B /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E163C7920E0E4B500D76D6B /* Box.swift */; };
 		3E54EDEB20D8044800E1E59A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54EDEA20D8044800E1E59A /* Comment.swift */; };
 		3ED2657B20CB9D7000BB750D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2657A20CB9D7000BB750D /* AppDelegate.swift */; };
 		3ED2657D20CB9D7000BB750D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2657C20CB9D7000BB750D /* DetailsViewController.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		102AA7FF096EF256E8EA1948 /* Pods-MealSpice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealSpice.release.xcconfig"; path = "Pods/Target Support Files/Pods-MealSpice/Pods-MealSpice.release.xcconfig"; sourceTree = "<group>"; };
 		22D5A2660A760C0E55FC23D8 /* Pods_MealSpiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealSpiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E163C7620E0D0D600D76D6B /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		3E163C7920E0E4B500D76D6B /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		3E54EDEA20D8044800E1E59A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3ED2657720CB9D7000BB750D /* MealSpice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealSpice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED2657A20CB9D7000BB750D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E163C7820E0D0DF00D76D6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E163C7620E0D0D600D76D6B /* RestaurantViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3ED2656E20CB9D7000BB750D = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				3ED2657A20CB9D7000BB750D /* AppDelegate.swift */,
+				3E163C7920E0E4B500D76D6B /* Box.swift */,
+				3E163C7820E0D0DF00D76D6B /* ViewModel */,
 				3ED265A020CBA09D00BB750D /* View */,
 				3ED2659E20CBA07200BB750D /* Model */,
 				3ED2657E20CB9D7000BB750D /* Main.storyboard */,
@@ -323,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E54EDEB20D8044800E1E59A /* Comment.swift in Sources */,
+				3E163C7A20E0E4B500D76D6B /* Box.swift in Sources */,
+				3E163C7720E0D0D600D76D6B /* RestaurantViewModel.swift in Sources */,
 				3ED2659D20CB9F7600BB750D /* Restaurant.swift in Sources */,
 				3ED2659B20CB9F6400BB750D /* WebService.swift in Sources */,
 				3ED2657D20CB9D7000BB750D /* DetailsViewController.swift in Sources */,

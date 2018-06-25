@@ -21,21 +21,36 @@ class DetailsViewController: UIViewController {
   
   //  MARK:- Other Variables
   var restaurantId: String = "lombardis-pizza"
-  var apiService = WebService()
-  var restaurant: Restaurant!
+  var restaurantViewModel: RestaurantViewModel!
 
+  //  MARK:- ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    restaurant = apiService.getRestaurantFromServer(self.restaurantId)
-    
-    self.restaurantName.text = restaurant.name
-    self.tagline.text = restaurant.tagline
-    self.comments.text = "\(restaurant.comments)"
-    self.imageView.sd_setImage(with: URL(string: (restaurant.pic)), completed: nil)
-    self.address.text = restaurant.address
-    
+    self.restaurantViewModel = RestaurantViewModel(restaurantId: self.restaurantId)
+    bindOutlets()
   }
+  
+  //  MARK:- Other Methods
+  func bindOutlets() {
+    // since we haven't used boxing for restaurantName in RestaurantViewModel;
+    self.restaurantName.text = restaurantViewModel.restaurantName
+    
+    // bind properties in RestaurantViewModel to outlets
+    restaurantViewModel.tagline.bind { [unowned self] in
+      self.tagline.text = $0
+    }
+    restaurantViewModel.comments.bind { [unowned self] in
+      self.comments.text = "\($0)"
+    }
+    restaurantViewModel.imageUrl.bind { [unowned self] in
+      self.imageView.sd_setImage(with: URL(string: $0), completed: nil)
+    }
+    restaurantViewModel.address.bind { [unowned self] in
+      self.address.text = $0
+    }
+  }
+  
   
 }
 
