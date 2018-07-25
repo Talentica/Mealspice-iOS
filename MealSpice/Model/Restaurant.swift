@@ -15,6 +15,7 @@ class Restaurant: NSObject, Mappable {
   var tagline: String = ""
   var rating: Int = 0
   var pic: String = ""
+  var slug: String = ""
   
   required init?(map: Map){
   }
@@ -29,5 +30,6 @@ class Restaurant: NSObject, Mappable {
     address <- map["address"]
     tagline <- map["tagline"]
     rating <- map["rating"]
+    slug <- map["slug"]
   }
 }

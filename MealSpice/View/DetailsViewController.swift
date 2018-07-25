@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController {
   @IBOutlet weak var address: UILabel!
   
   //  MARK:- Other Variables
-  var restaurantId: String = "lombardis-pizza"
+  var restaurantId: String = ""
   var restaurantViewModel: RestaurantViewModel!
 
   //  MARK:- ViewController Methods
