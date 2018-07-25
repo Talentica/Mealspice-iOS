@@ -15,9 +15,8 @@ class DetailsViewController: UIViewController {
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var restaurantName: UILabel!
   @IBOutlet weak var tagline: UILabel!
-  @IBOutlet weak var comments: UILabel!
+  @IBOutlet weak var rating: UILabel!
   @IBOutlet weak var address: UILabel!
-  @IBOutlet weak var commentImageView: UIImageView!
   
   //  MARK:- Other Variables
   var restaurantId: String = "lombardis-pizza"
@@ -27,21 +26,26 @@ class DetailsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.restaurantViewModel = RestaurantViewModel(restaurantId: self.restaurantId)
-    bindOutlets()
+    self.restaurantViewModel = RestaurantViewModel(restaurantId: self.restaurantId) { status in
+      if status == "success" {
+        self.bindOutlets()
+      } else {
+        // TODO: handle error here
+      }
+    }
   }
   
   //  MARK:- Other Methods
   func bindOutlets() {
-    // since we haven't used boxing for restaurantName in RestaurantViewModel;
-    self.restaurantName.text = restaurantViewModel.restaurantName
-    
     // bind properties in RestaurantViewModel to outlets
+    restaurantViewModel.restaurantName.bind { [unowned self] in
+      self.restaurantName.text = $0
+    }
     restaurantViewModel.tagline.bind { [unowned self] in
       self.tagline.text = $0
     }
-    restaurantViewModel.comments.bind { [unowned self] in
-      self.comments.text = "\($0)"
+    restaurantViewModel.rating.bind { [unowned self] in
+      self.rating.text = "\($0)"
     }
     restaurantViewModel.imageUrl.bind { [unowned self] in
       self.imageView.sd_setImage(with: URL(string: $0), completed: nil)

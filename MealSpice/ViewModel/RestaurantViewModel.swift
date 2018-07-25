@@ -9,20 +9,17 @@
 import Foundation
 
 class RestaurantViewModel {
-  private var apiService = WebService()
+  private var apiService = Webservice.shared
   private var restaurant: Restaurant!
   
-  //  keeping this show how it can be done without Boxing
-  var restaurantName: String {
-    return self.restaurant.name
+  var restaurantName: Box<String> {
+    return Box(self.restaurant.name)
   }
-  
-  //  using boxing so that we can bind outlets to these properties
   var tagline: Box<String> {
     return Box(self.restaurant.tagline)
   }
-  var comments: Box<Int> {
-    return Box(self.restaurant.comments)
+  var rating: Box<Int> {
+    return Box(self.restaurant.rating)
   }
   var imageUrl: Box<String> {
     return Box(self.restaurant.pic)
@@ -31,7 +28,15 @@ class RestaurantViewModel {
     return Box(self.restaurant.address)
   }
   
-  public init(restaurantId id: String) {
-    self.restaurant = apiService.getRestaurantFromServer(id)
+  public init(restaurantId id: String, completion: @escaping ((String) -> Void)) {
+    apiService.getRestaurant(id) { restaurantDetails in
+      if restaurantDetails == nil {
+        completion("failed")
+        return
+      }
+      self.restaurant = restaurantDetails
+      completion("success")
+      print(restaurantDetails)
+    }
   }
 }

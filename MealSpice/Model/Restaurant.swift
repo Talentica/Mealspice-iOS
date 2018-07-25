@@ -7,12 +7,27 @@
 //
 
 import Foundation
+import ObjectMapper
 
-public struct Restaurant {
-  let name: String
-  let address: String
-  let tagline: String
-  let rating: Int
-  let pic: String
-  let comments: Int
+class Restaurant: NSObject, Mappable {
+  var name: String = ""
+  var address: String = ""
+  var tagline: String = ""
+  var rating: Int = 0
+  var pic: String = ""
+  
+  required init?(map: Map){
+  }
+  
+  override init() {
+    super.init()
+  }
+  
+  func mapping(map: Map) {
+    name <- map["name"]
+    pic <- map["pic"]
+    address <- map["address"]
+    tagline <- map["tagline"]
+    rating <- map["rating"]
+  }
 }

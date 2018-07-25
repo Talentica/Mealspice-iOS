@@ -7,6 +7,8 @@ target 'MealSpice' do
 
   # Pods for MealSpice
   pod 'SDWebImage', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireObjectMapper', '~> 5.0'
 
   target 'MealSpiceTests' do
     inherit! :search_paths
