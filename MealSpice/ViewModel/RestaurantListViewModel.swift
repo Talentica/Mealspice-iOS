@@ -23,7 +23,6 @@ struct RestaurantListViewModel {
       completion?(Result.failure(ErrorResult.custom(string: "Missing service")))
       return
     }
-    
     service.fetchRestaurantList { result in
       DispatchQueue.main.async {
         switch result {

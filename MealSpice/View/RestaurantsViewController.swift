@@ -24,6 +24,7 @@ class RestaurantsViewController: UIViewController {
   //  MARK:- ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.title = "Restaurant List"
     self.restaurantsTableView.delegate = self
     self.restaurantsTableView.dataSource = self.dataSource
     self.restaurantsTableView.rowHeight = 120;
@@ -43,8 +44,8 @@ class RestaurantsViewController: UIViewController {
 //  MARK:- TableView Delegate
 extension RestaurantsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell!
-    self.slug = (cell?.restaurantSlug.text)!
+    let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+    self.slug = (cell.restaurantSlug.text)!
     self.performSegue(withIdentifier: "showRestaurantDetailSegue", sender: nil)
   }
 }

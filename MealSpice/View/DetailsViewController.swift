@@ -25,7 +25,7 @@ class DetailsViewController: UIViewController {
   //  MARK:- ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    self.title = "Restaurant Detail"
     self.restaurantViewModel = RestaurantViewModel(restaurantId: self.restaurantId) { status in
       if status == "success" {
         self.bindOutlets()

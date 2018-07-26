@@ -9,5 +9,5 @@
 import Foundation
 
 class GenericDataSource<T> : NSObject {
-  var data: Box<[T]> = Box([])
+  var data: Box<[T]> = Box([]) //Array of Data
 }
