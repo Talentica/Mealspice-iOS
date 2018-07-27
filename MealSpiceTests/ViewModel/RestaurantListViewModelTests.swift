@@ -15,10 +15,13 @@ class RestaurantListViewModelTests: XCTestCase {
     var dataSource: RestaurantListDataSource!
     var service: RestaurantServiceProtocol?
     
-    
     override func setUp() {
         super.setUp()
         viewModel = RestaurantListViewModel(dataSource: dataSource)
+    }
+    override func tearDown() {
+        super.tearDown()
+        viewModel = nil
     }
     
     func testSortByName() {
@@ -76,7 +79,7 @@ class RestaurantListViewModelTests: XCTestCase {
             
         }
     }
-    func testGetRestauRantListFailure() {
+    func testGetRestaurantListFailure() {
         let mockWebservice = MockWebService()
         viewModel.service = mockWebservice
         viewModel.fetchRestaurantList() {
@@ -87,14 +90,8 @@ class RestaurantListViewModelTests: XCTestCase {
             case .failure :
                 XCTAssert(true, "There are no restaurants, and it should be failure")
             }
-            
         }
     }
-    override func tearDown() {
-        super.tearDown()
-        viewModel = nil
-    }
-    
 }
 
 fileprivate class MockWebService: RestaurantServiceProtocol {
