@@ -36,7 +36,7 @@ class RestaurantViewModel {
       }
       self.restaurant = restaurantDetails
       completion("success")
-      print(restaurantDetails)
+      print(restaurantDetails!)
     }
   }
 }

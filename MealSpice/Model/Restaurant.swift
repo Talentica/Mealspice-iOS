@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 
 class Restaurant: NSObject, Mappable {
+    
   var name: String = ""
   var address: String = ""
   var tagline: String = ""
@@ -32,4 +33,5 @@ class Restaurant: NSObject, Mappable {
     rating <- map["rating"]
     slug <- map["slug"]
   }
+    
 }

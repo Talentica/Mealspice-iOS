@@ -41,7 +41,7 @@ final class Webservice : RestaurantServiceProtocol  {
           return
         }
   
-        if let error = response.error {
+        if let _ = response.error {
           completion(nil)
           return
         }

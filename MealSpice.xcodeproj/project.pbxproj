@@ -25,6 +25,7 @@
 		3ED9FE912107468500162670 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9FE902107468500162670 /* Result.swift */; };
 		3ED9FE93210746C300162670 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9FE92210746C300162670 /* ErrorResult.swift */; };
 		6B8C627D79B11DCB8CCE1938 /* Pods_MealSpice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B7913D94977D65A139561C /* Pods_MealSpice.framework */; };
+		984D425E210AF0AA00184E78 /* RestaurantListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984D425D210AF0AA00184E78 /* RestaurantListViewModelTests.swift */; };
 		98A5D1A32108E95000E3E9D1 /* MealSpiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A5D1A22108E95000E3E9D1 /* MealSpiceUITests.swift */; };
 		EA41205C306C45A5B4E0BA6F /* Pods_MealSpiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D5A2660A760C0E55FC23D8 /* Pods_MealSpiceTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		61B7913D94977D65A139561C /* Pods_MealSpice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealSpice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E33C14E4E26920D0407729C /* Pods-MealSpiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealSpiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MealSpiceTests/Pods-MealSpiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		84A071B6E2F8A7BAB014B553 /* Pods-MealSpiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealSpiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MealSpiceTests/Pods-MealSpiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		984D425D210AF0AA00184E78 /* RestaurantListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewModelTests.swift; sourceTree = "<group>"; };
 		98A5D1A02108E95000E3E9D1 /* MealSpiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealSpiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A5D1A22108E95000E3E9D1 /* MealSpiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSpiceUITests.swift; sourceTree = "<group>"; };
 		98A5D1A42108E95000E3E9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		98A5D1982108E61D00E3E9D1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				984D425D210AF0AA00184E78 /* RestaurantListViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ED2659020CB9D7200BB750D /* MealSpiceTests.swift in Sources */,
+				984D425E210AF0AA00184E78 /* RestaurantListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,7 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KLHFPX255B;
+				DEVELOPMENT_TEAM = QBTU833AC9;
 				INFOPLIST_FILE = MealSpice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,7 +653,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KLHFPX255B;
+				DEVELOPMENT_TEAM = QBTU833AC9;
 				INFOPLIST_FILE = MealSpice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

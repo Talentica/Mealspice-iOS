@@ -22,7 +22,7 @@ class RestaurantListDataSource : GenericDataSource<Restaurant>, UITableViewDataS
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantTableViewCell", for: indexPath) as! RestaurantTableViewCell
-    
+    cell.accessibilityIdentifier = "cell_\(indexPath.row)"
     let restaurant = self.data.value[indexPath.row]
     cell.restaurant = restaurant
     

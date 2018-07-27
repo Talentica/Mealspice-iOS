@@ -17,27 +17,33 @@ class RestaurantTableViewCell: UITableViewCell {
   @IBOutlet weak var restaurantSlug: UILabel!
   
   //  MARK:- Other Variables
-  var restaurant : Restaurant? {
-    didSet {
-      guard let restaurant = restaurant else {
-        return
-      }
-      
-      restaurantName?.text = "\(restaurant.name)"
-      restaurantImageView.sd_setImage(with: URL(string: restaurant.pic), completed: nil)
-      restaurantAddress?.text = "\(restaurant.address)"
-      restaurantSlug?.text = "\(restaurant.slug)"
+    var restaurant : Restaurant? {
+        didSet {
+          guard let restaurant = restaurant else {
+            return
+          }
+          restaurantName?.text = "\(restaurant.name)"
+          restaurantImageView.sd_setImage(with: URL(string: restaurant.pic), completed: nil)
+          restaurantAddress?.text = "\(restaurant.address)"
+          restaurantSlug?.text = "\(restaurant.slug)"
+        }
     }
-  }
   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        contentView.subviews.forEach { $0.isAccessibilityElement = true }
+        restaurantName.accessibilityIdentifier = "restaurantName"
+        restaurantImageView.accessibilityIdentifier = "restaurantImageView"
+        restaurantAddress.accessibilityIdentifier = "restaurantAddress"
     }
   
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-  
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        accessibilityIdentifier = nil
+    }
 }
