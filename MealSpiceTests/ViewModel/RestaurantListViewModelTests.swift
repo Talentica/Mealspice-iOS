@@ -43,7 +43,7 @@ class RestaurantListViewModelTests: XCTestCase {
         rest2.rating = 2
         let rest3 = Restaurant()
         rest3.rating = 3
-        let list = [rest1, rest2]
+        let list = [rest1, rest2, rest3]
         
         let desiredList = [rest3, rest2, rest1]
         let endList = viewModel.sortListByName(list: list)
