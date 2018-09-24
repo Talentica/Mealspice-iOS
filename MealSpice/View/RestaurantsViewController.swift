@@ -9,7 +9,7 @@
 import UIKit
 
 class RestaurantsViewController: UIViewController {
-
+    
   //  MARK:- Outlets
     @IBOutlet weak var restaurantsTableView: UITableView!
     @IBOutlet weak var ratingButton: UIButton!

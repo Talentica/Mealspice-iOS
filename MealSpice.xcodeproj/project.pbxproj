@@ -27,6 +27,7 @@
 		6B8C627D79B11DCB8CCE1938 /* Pods_MealSpice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B7913D94977D65A139561C /* Pods_MealSpice.framework */; };
 		984D425E210AF0AA00184E78 /* RestaurantListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984D425D210AF0AA00184E78 /* RestaurantListViewModelTests.swift */; };
 		98A5D1A32108E95000E3E9D1 /* MealSpiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A5D1A22108E95000E3E9D1 /* MealSpiceUITests.swift */; };
+		B39160EB2155494F00FD3A0B /* AdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39160EA2155494F00FD3A0B /* AdView.xib */; };
 		EA41205C306C45A5B4E0BA6F /* Pods_MealSpiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D5A2660A760C0E55FC23D8 /* Pods_MealSpiceTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		98A5D1A02108E95000E3E9D1 /* MealSpiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealSpiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A5D1A22108E95000E3E9D1 /* MealSpiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSpiceUITests.swift; sourceTree = "<group>"; };
 		98A5D1A42108E95000E3E9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39160EA2155494F00FD3A0B /* AdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		3ED2657920CB9D7000BB750D /* MealSpice */ = {
 			isa = PBXGroup;
 			children = (
+				B39160EC215549C000FD3A0B /* admob */,
 				3ED2657A20CB9D7000BB750D /* AppDelegate.swift */,
 				3E163C7920E0E4B500D76D6B /* Box.swift */,
 				3ED9FE8A2107421E00162670 /* GenericDataSource.swift */,
@@ -236,6 +239,14 @@
 				98A5D1A42108E95000E3E9D1 /* Info.plist */,
 			);
 			path = MealSpiceUITests;
+			sourceTree = "<group>";
+		};
+		B39160EC215549C000FD3A0B /* admob */ = {
+			isa = PBXGroup;
+			children = (
+				B39160EA2155494F00FD3A0B /* AdView.xib */,
+			);
+			path = admob;
 			sourceTree = "<group>";
 		};
 		C96268341D21D6CE0AE5BED3 /* Pods */ = {
@@ -356,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39160EB2155494F00FD3A0B /* AdView.xib in Resources */,
 				3ED2658520CB9D7200BB750D /* LaunchScreen.storyboard in Resources */,
 				3ED2658220CB9D7200BB750D /* Assets.xcassets in Resources */,
 				3ED2658020CB9D7000BB750D /* Main.storyboard in Resources */,
@@ -634,8 +646,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBTU833AC9;
+				DEVELOPMENT_TEAM = 4379M7D5JT;
 				INFOPLIST_FILE = MealSpice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,8 +666,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBTU833AC9;
+				DEVELOPMENT_TEAM = 4379M7D5JT;
 				INFOPLIST_FILE = MealSpice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
